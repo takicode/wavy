@@ -1,0 +1,168 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Bebas Neue";
+    font-size:20px;
+    background:#160921;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    backdrop-filter:blur(10px);
+    border-bottom:.1px solid #918585;
+}
+
+
+.nav-logo{
+    font-family: "Great Vibes", cursive;
+    font-size:40px;
+    font-weight:800;
+    font-style: normal;
+    text-decoration:none;
+    color:#fff;
+}
+
+
+.nav-links{
+    display:flex; 
+    gap:60px;
+    list-style:none;
+}
+
+.nav-links li a{
+    text-decoration:none;
+    color:#fff;
+    font-size:25px;
+    transition:all .7s ease-in-out 
+}
+
+
+.nav-links li a:hover{
+    font-size:28px;
+    color:orange;
+}
+
+
+.hero{
+  position:relative;
+  height:90vh;
+  background:#2e103f;
+  display:flex;
+  justify-content:center;
+  align-items:center
+
+}
+
+.hero-text{
+    position:relative;
+    z-index:10;
+    color:#fff;
+    font-size:60px;
+    line-height:1;
+    animation:float 5s ease-in-out infinite;
+}
+
+.hero-sub{
+  font-size:35px;
+  letter-spacing:4px;
+}
+
+
+.waves-container{
+    position:absolute;
+    bottom:0;
+    height:450px;
+    width:100%;
+   
+}
+
+.wave{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:200%;
+    height:100%
+}
+
+
+.wave-1{
+    background:#8b1fc8;
+    opacity:.2;
+    clip-path:path('M0 160, C150,100 300,220 450,160 C600,100 750,220 900,160 C1050,100 1200,220 1350,160 C1500,100 1650,220 1800 160 C1950,100 2100,220 2250 160 V450 H0 Z');
+    animation:oceanWave 20s ease-in-out infinite;
+}
+
+.wave-2{
+    background:#f0622a;
+    opacity:.3;
+    clip-path:path('M0 100, C200,40 400,160 600,100 C800,40 1000,160 1200,100 C1400,40 1600,160 1800,100 C2000,40 2200,160 2400,100 V450 H0 Z');
+    animation:oceanWave 15s ease-in-out infinite;
+}
+
+.wave-3{
+    background:#c2176e;
+    opacity:.4;
+    clip-path:path('M0 200, C250,150 500,250 750 200 C1000,150 1150,250 1300,200 C1450,150 1600,250 1750,200 C2000,150 2150,250 2300,200 V500 H0 Z');
+    animation:oceanWave 10s ease-in-out infinite;
+}
+
+.moon{
+    position:absolute;
+    top:20px;
+    right:40px;
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    background:#b19595;
+}
+
+
+
+/* content section */
+
+.main-section{
+    height:80vh;
+    background:#fff;
+    color:#222;
+}
+
+
+@keyframes oceanWave{
+    0%{
+       transform:translateX(0) 
+    }
+    100%{
+         transform:translateX(-350px)
+    }
+}
+
+
+@keyframes float{
+    0%,100%{
+       transform:translateY(0) rotate(0deg)
+    }
+    50%{
+         transform:translateY(-15px)rotate(5deg)
+    }
+
+    100%{
+         transform:translateY(0) rotate(0deg)
+    }
+}
+
+
+
+
