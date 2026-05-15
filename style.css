@@ -73,6 +73,7 @@ nav{
     font-size:60px;
     line-height:1;
     animation:float 5s ease-in-out infinite;
+    text-align:center;
 }
 
 .hero-sub{
@@ -134,11 +135,86 @@ nav{
 /* content section */
 
 .main-section{
-    height:80vh;
     background:#fff;
     color:#222;
+    padding:100px 60px 0 60px;
 }
 
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+    gap:40px;
+    color:#3b0907;
+    letter-spacing:1px;
+}
+
+.card{
+    border : 1px solid #bbbbbb;
+    border-radius:20px;
+    padding:50px 20px;
+    transition:all 1s ease-in-out;
+    background:#f9f6f6;
+}
+
+.card:hover{
+   border : 1px solid #a05a7e;
+   transform:translateY(-15px);
+   box-shadow:0px 4px 10px rgba(142, 124, 21, 0.3);
+}
+
+
+.card h3{
+  margin: 10px 0px;
+}
+
+.icon-box{
+    height:80px;
+    width:80px;
+    border-radius:18px;
+    padding-bottom:30px;
+    transition: transform 0.4s ease;
+}
+
+
+.card-1-icon{
+    clip-path:polygon(50% 0%,100% 50%, 50% 100%, 0% 50% );
+    background:#f0622a;
+}
+
+.card-2-icon{
+    clip-path:circle();
+    background:#8b1fc8;
+}
+
+.card-3-icon{
+    clip-path:polygon(50% 0%, 100% 100%, 0% 100% );
+    background:#c2176e;
+}
+
+.card:hover .icon-box{
+   transform:rotateY(180deg)
+}
+
+.bounce-container{
+    margin-top:20px;
+    height:100px;
+    width:100px;
+    background:#f0622a;
+    clip-path:circle();
+    animation:bounce 10s ease-in infinite;
+}
+
+@keyframes bounce{
+    0%{
+       transform:translateX(0) translateY(0)
+    }
+    50%{
+      transform:translateX(90vw)
+    }
+    100%{
+         transform:translateX(0px)
+    }
+}
 
 @keyframes oceanWave{
     0%{
